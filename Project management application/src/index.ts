@@ -9,7 +9,7 @@ const clusterInfo = 'clusterpm';
 
 (async () => {
   try {
-    await mongoose.connect(`mongodb+srv://${userName}:${password}@${clusterInfo}.fzhfeov.mongodb.net/managerApp`);
+    await mongoose.connect(`mongodb+srv://${userName}:${password}@${clusterInfo}.fzhfeov.mongodb.net/?retryWrites=true&w=majority`);
     serverService.server.listen(process.env.PORT || PORT, function () {
       console.log('Сервер ожидает подключения...');
     })
