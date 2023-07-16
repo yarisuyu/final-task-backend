@@ -3,9 +3,9 @@ import { PORT } from './constants';
 
 import * as serverService from './services/server.service';
 
-const userName = 'lisinaeg';
-const password = 'uiaq6V8YrwUGiaoW';
-const clusterInfo = 'clusterpm';
+const userName = encodeURIComponent('lisinaeg');
+const password = encodeURIComponent('uiaq6V8YrwUGiaoW');
+const clusterInfo = encodeURIComponent('clusterpm');
 
 (async () => {
   try {
